@@ -1,0 +1,365 @@
+/*==================================
+  Global Styles & Variables
+==================================*/
+:root {
+  --primary-color: #1c1c1c;      /* Dark black for main elements */
+  --secondary-color: #a4a4a4;    /* Light gray for secondary text and borders */
+  --accent-color: #007bff;       /* A subtle blue for accents and buttons */
+  --light-color: #f5f5f5;        /* Very light gray for backgrounds */
+  --dark-color: #0d0d0d;         /* Even darker black for footers, etc. */
+  --text-color: #1c1c1c;         /* Main text color */
+  --bg-color: #fcfcfc;           /* Main background color */
+  --card-bg: #ffffff;            /* White for cards */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Lighter, more modern shadow */
+  --border-radius: 8px;
+}
+
+/* Dark Theme specific variables */
+.dark-theme {
+  --primary-color: #f5f5f5;      /* Light gray for main elements */
+  --secondary-color: #6c757d;    /* Darker gray for secondary text */
+  --accent-color: #2980b9;       /* A different blue for contrast */
+  --light-color: #34495e;
+  --dark-color: #ecf0f1;
+  --text-color: #ecf0f1;
+  --bg-color: #121212;           /* Dark background */
+  --card-bg: #212121;            /* Dark gray for cards */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*==================================
+Header & Navigation
+==================================*/
+header, footer {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.dark-theme .logo {
+  color: var(--light-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-left: 2.5rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.auth-buttons, .user-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/*==================================
+Buttons & Forms
+==================================*/
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.dark-theme .btn-outline {
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #c0392b;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/*==================================
+Hero & Sections
+==================================*/
+.hero-section {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.dark-theme .section-title {
+  color: var(--light-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-cards .card {
+  flex: 1;
+  max-width: 350px;
+  text-align: center;
+}
+
+/*==================================
+Cards & Modals
+==================================*/
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+.close-modal {
+  color: var(--secondary-color);
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}
+
+.modal-switch-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.modal-switch-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.user-type-selection {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-type {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.user-type.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/*==================================
+Keyframes & Animations
+==================================*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*==================================
+Responsive Design
+==================================*/
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  nav ul {
+      margin-top: 1rem;
+      justify-content: center;
+  }
+  .auth-buttons, .user-menu {
+      margin-top: 1rem;
+      justify-content: center;
+  }
+  .hero-section {
+      padding: 4rem 1rem;
+  }
+  .hero-section h2 {
+      font-size: 2rem;
+  }
+  .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+}

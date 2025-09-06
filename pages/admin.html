@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">MaidConnect Admin</h1>
+            <div class="user-menu">
+                <button id="refresh-btn" class="btn btn-primary">Refresh</button>
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container admin-dashboard-grid">
+        <section class="admin-card card">
+            <h2 class="section-title">System Overview</h2>
+            <div class="admin-actions">
+                <div class="stats-box">
+                    <h3>Total Users</h3>
+                    <p id="stats-users">0</p>
+                </div>
+                <div class="stats-box">
+                    <h3>Total Jobs</h3>
+                    <p id="stats-jobs">0</p>
+                </div>
+                <div class="stats-box">
+                    <h3>Total Applications</h3>
+                    <p id="stats-applications">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-card card">
+            <h2 class="section-title">User Management</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Session</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <section class="admin-card card">
+            <h2 class="section-title">Job Posts Overview</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Job Title</th>
+                        <th>Flat Owner</th>
+                        <th>Location</th>
+                        <th>Salary</th>
+                        <th>Applications</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="job-table-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <section class="admin-card card">
+            <h2 class="section-title">Job Applications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Maid Name</th>
+                        <th>Job Title</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="application-table-body">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/admin-dashboard.js"></script>
+</body>
+</html>

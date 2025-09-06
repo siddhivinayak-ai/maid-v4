@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Owner Dashboard</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">MaidConnect</h1>
+            <nav>
+                <ul>
+                    <li><a href="#jobs">My Jobs</a></li>
+                    <li><a href="#maids">Find Maids</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container dashboard-container">
+        <aside class="sidebar">
+            <div class="job-section card">
+                <h2 class="section-title">Post a New Job</h2>
+                <form id="job-post-form">
+                    <div class="form-group">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" placeholder="e.g. Cook, Babysitter" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-location">Location</label>
+                        <input type="text" id="job-location" placeholder="Enter location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-salary">Offered Salary (₹)</label>
+                        <input type="number" id="job-salary" placeholder="Enter amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-description">Job Description</label>
+                        <textarea id="job-description" placeholder="Describe the job requirements and responsibilities..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Post Job</button>
+                </form>
+            </div>
+            
+            <div id="applications-section" class="job-section card">
+                <h2 class="section-title">Job Applications</h2>
+                <div id="applications-list">
+                    </div>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div id="jobs-section" class="job-section">
+                <h2 class="section-title">My Posted Jobs</h2>
+                <div id="flatowner-job-listings">
+                    </div>
+            </div>
+            
+            <div id="maids-section" class="job-section">
+                <h2 class="section-title">Find Maids</h2>
+                <div class="search-container">
+                    <input type="text" id="maid-search" placeholder="Search by skill or location...">
+                    <button id="maid-filter-btn" class="btn btn-primary">Search</button>
+                </div>
+                <div id="maid-list">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="view-maid-modal" class="details-modal">
+        <div class="details-content card">
+            <span class="close-modal">&times;</span>
+            <div id="view-maid-details">
+                </div>
+        </div>
+    </div>
+
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/flatowner-dashboard.js"></script>
+</body>
+</html>

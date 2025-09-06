@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid Dashboard</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">MaidConnect</h1>
+            <nav>
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button id="logout-btn" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container dashboard-container">
+        <aside class="sidebar">
+            <div id="profile-section" class="profile-section card">
+                <h2 class="section-title">My Profile</h2>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-name">Name</label>
+                        <input type="text" id="profile-name" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-role">Role</label>
+                        <input type="text" id="profile-role" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-location">Location</label>
+                        <input type="text" id="profile-location" placeholder="Enter your location">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-skills">Skills / Things I Can Do</label>
+                        <textarea id="profile-skills" placeholder="e.g. Cooking, Babysitting, Baby Massage..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-salary">Expected Salary (₹)</label>
+                        <input type="number" id="profile-salary" placeholder="Enter amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-age">Age</label>
+                        <input type="number" id="profile-age" placeholder="Enter age">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-experience">Experience (Years)</label>
+                        <input type="number" id="profile-experience" placeholder="Enter experience in years">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-religion">Religion</label>
+                        <input type="text" id="profile-religion" placeholder="Enter religion">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-native">Native Place</label>
+                        <input type="text" id="profile-native" placeholder="Enter your native place">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-education">Education</label>
+                        <input type="text" id="profile-education" placeholder="Enter your education level">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-language">Language</label>
+                        <input type="text" id="profile-language" placeholder="Enter languages you speak">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-babyAge">Baby Age She Can Handle</label>
+                        <input type="text" id="profile-babyAge" placeholder="e.g. 0-2 years">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-babiesHandled">No of Babies Handled</label>
+                        <input type="number" id="profile-babiesHandled" placeholder="Enter number of babies handled">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-note">Note</label>
+                        <textarea id="profile-note" placeholder="Any special notes about yourself"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Save Profile</button>
+                </form>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div id="jobs-section" class="job-section">
+                <h2 class="section-title">Available Jobs</h2>
+                <div class="search-container">
+                    <input type="text" id="job-search" placeholder="Search by title, location, skills...">
+                    <button id="job-filter-btn" class="btn btn-primary">Search</button>
+                </div>
+                <div id="job-listings">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/maid-dashboard.js"></script>
+</body>
+</html>

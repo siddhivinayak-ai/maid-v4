@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaidConnect - Your Partner in Domestic Help</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">MaidConnect</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Log In</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+                <button id="theme-toggle" class="btn btn-outline">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Connecting Maids and Flat Owners, Effortlessly.</h2>
+                <p>Find trusted domestic help or your next job with our intuitive platform. Your perfect match is just a click away.</p>
+                <div class="hero-buttons">
+                    <button id="hero-signup-btn" class="btn btn-primary">Get Started</button>
+                    <button id="hero-login-btn" class="btn btn-outline">Already a user? Log In</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Find Your Maid</h3>
+                    <p>Easily browse through detailed profiles of experienced maids, filtered by location, skills, and salary expectations.</p>
+                </div>
+                <div class="card">
+                    <h3>Post a Job</h3>
+                    <p>Flat owners can quickly create and post job openings, attracting relevant applicants with ease and efficiency.</p>
+                </div>
+                <div class="card">
+                    <h3>Secure & Verified</h3>
+                    <p>All users undergo a simple verification process to ensure a safe and trustworthy community for both parties.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container section">
+            <h2 class="section-title">About MaidConnect</h2>
+            <p class="text-center">MaidConnect was founded to bridge the gap between flat owners in need of domestic help and skilled maids looking for work. We believe in providing a transparent and efficient platform that empowers both parties to find the perfect fit. Our mission is to make the process of hiring and finding a job simple, secure, and respectful for everyone.</p>
+        </section>
+
+        <section id="contact" class="container section">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="text-center">For any support or inquiries, please reach out to us at: <strong>support@maidconnect.com</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MaidConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content card">
+            <span class="close-modal">&times;</span>
+            <h2>Log In</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Log In</button>
+            </form>
+            <p class="modal-switch-text">Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content card">
+            <span class="close-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label>I am a...</label>
+                    <div class="user-type-selection">
+                        <span class="user-type active" data-type="maid">Maid</span>
+                        <span class="user-type" data-type="flatowner">Flat Owner</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Create Account</button>
+            </form>
+            <p class="modal-switch-text">Already have an account? <a href="#" id="switch-to-login">Log In</a></p>
+        </div>
+    </div>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+</html>
